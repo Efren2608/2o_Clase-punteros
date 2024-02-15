@@ -1,0 +1,33 @@
+#include <iostream>
+#include<stdlib.h>
+using namespace std;
+
+class Juguete{
+    private:
+        string material;
+        string pintura; 
+    public:
+        Juguete(string,string);
+        void mostrarJuguete();
+};
+
+Juguete::Juguete(string _material,string _pintura){
+    material = _material;
+    pintura = _pintura;
+}
+  
+void Juguete::mostrarJuguete(){
+    cout << "Material: "<<material<<endl;
+    cout << "Pintura: "<<pintura<<endl;
+}
+
+
+int main()
+{
+  std::unique_ptr<Juguete> detallado {p:new Juguete}; //smart pointer
+  Juguete j1("Vinil","Acrilico","Moviles","Detallado");
+    
+    j1.mostrarJuguete();
+
+    return 0;
+}
